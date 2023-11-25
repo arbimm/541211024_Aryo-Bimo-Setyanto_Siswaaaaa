@@ -66,7 +66,7 @@ module.exports = {
             data: users,
             method: req.method,
             url: req.url,
-            message: "Data berhasil di hapus"
+            message: "Data berhasil di hapus "
         })
     },
 }
