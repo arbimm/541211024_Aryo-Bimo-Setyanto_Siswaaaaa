@@ -1,21 +1,23 @@
 const express = require('express')
+const userRouter = require('./router/users')
 const app = express()
-const userrouter = require('./router/users')
+const port = 3000
 const connectDB = require('./config/db')
 
-app.use(express.json()) // for parsing application/json
-app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+const cors = require('cors');
 
-const port = 3000
+app.use(express.json()) 
+app.use(express.urlencoded({ extended: true })) 
+app.use(cors())
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+  res.send('Hello World!')
 })
 
-app.use(userrouter)
+app.use(userRouter)
 
 connectDB()
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+  console.log(`Example app listening on port ${port}`)
 })
