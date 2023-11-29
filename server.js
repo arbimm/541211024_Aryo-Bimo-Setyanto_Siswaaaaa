@@ -1,5 +1,5 @@
 const express = require('express')
-const userRouter = require('./router/users')
+const sppRouter = require('./router/spps')
 const app = express()
 const port = 3000
 const connectDB = require('./config/db')
@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.use(userRouter)
+app.use(sppRouter)
 
 connectDB()
 
