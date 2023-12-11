@@ -1,15 +1,15 @@
-const Spp = require('../models/Spp')
+const Siswa = require('../models/Siswa')
 
 module.exports = {
-    // get all users
+    // get all Spps
     index: async (req, res) => {
         try {
-            const users = await Spp.find()
-            res.json(users)
-            // if (users.length > 0) {
+            const siswas = await Siswa.find()
+            res.json(siswas)
+            // if (Spps.length > 0) {
             //     res.status(200).json({
             //         status: true,
-            //         data: users,
+            //         data: Spps,
             //         method: req.method,
             //         url: req.url
             //     })
@@ -24,13 +24,13 @@ module.exports = {
         }
     },
 
-    // get a user
+    // get a Spp
     show: async (req, res) => {
         try {
-            const user = await Spp.findById(req.params.id)
+            const siswa = await Siswa.findById(req.params.id)
             res.json({
                 status: true,
-                data: user,
+                data: siswa,
                 method: req.method,
                 url: req.url,
                 message: "Data berhasil didapat"
@@ -43,10 +43,10 @@ module.exports = {
 
     store: async (req, res) => {
         try {
-            const spp = await Spp.create(req.body)
+            const siswa = await Siswa.create(req.body)
             res.status(200).json({
                 status: true,
-                data: spp,
+                data: siswa,
                 method: req.method,
                 url: req.url,
                 message: "Data berhasil ditambah"
@@ -58,13 +58,13 @@ module.exports = {
 
     update: async (req, res) => {
         try {
-            const spp = await Spp.findByIdAndUpdate(req.params.id, req.body, {
+            const siswa = await Siswa.findByIdAndUpdate(req.params.id, req.body, {
                 new: true,
                 runValidators: true
             })
             res.json({
                 status: true,
-                data: spp,
+                data: siswa,
                 method: req.method,
                 url: req.url,
                 message: "Data berhasil diubah"
@@ -77,7 +77,7 @@ module.exports = {
 
     delete: async (req, res) => {
         try {
-            await Spp.findByIdAndDelete(req.params.id)
+            await Siswa.findByIdAndDelete(req.params.id)
             res.json({
                 status: true,
                 method: req.method,
