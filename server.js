@@ -1,5 +1,6 @@
 const express = require('express')
-const sppRouter = require('./router/spps')
+const userRouter = require('./router/users')
+const siswaRouter = require('./router/siswas')
 const app = express()
 const port = 3000
 const connectDB = require('./config/db')
@@ -14,7 +15,10 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.use(sppRouter)
+app.use(userRouter)
+app.use(siswaRouter)
+
+
 
 connectDB()
 
