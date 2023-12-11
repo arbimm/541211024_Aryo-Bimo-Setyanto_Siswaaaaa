@@ -1,5 +1,5 @@
 {
-  "name": "541211144-rafly-xiirpl4",
+  "name": "541211024-arbimm-xiirpl1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/raflyyadinata/express-basic.git"
+    "url": "git+https://github.com/arbimm/541211024_Aryo-Bimo-Setyanto_Siswa.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/raflyyadinata/express-basic/issues"
+    "url": "https://github.com/arbimm/541211024_Aryo-Bimo-Setyanto_Siswa/issues"
   },
-  "homepage": "https://github.com/raflyyadinata/express-basic#readme",
+  "homepage": "https://github.com/arbimm/541211024_Aryo-Bimo-Setyanto_Siswa#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
