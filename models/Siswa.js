@@ -1,21 +1,21 @@
 const mongoose = require('mongoose')
 
-const SppSchema = new mongoose.Schema({
+const SiswaSchema = new mongoose.Schema({
     nama: {
         type: String,
         required: [true, 'Isikan nama'],
     },
-    bulan: {
+    jurusan: {
         type: String,
-        required: [true, 'Isikan bulan'],
+        required: [true, 'Isikan jurusan'],
     },
-    spp: {
+    kelas: {
         type: Number,
-        required: [true, 'masukan spp bulan ini'],
+        required: [true, 'masukan kelas'],
     },
     nis: {
         type: Number,
-        required: [true, 'masukan spp bulan ini'],
+        required: [true, 'masukan nis'],
     },
     email: {
         type: String,
@@ -24,5 +24,4 @@ const SppSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('Spp', SppSchema)
-
+module.exports = mongoose.model('Siswa', SiswaSchema)
